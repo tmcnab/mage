@@ -1,4 +1,4 @@
-node_modules
-dist
-out
 .gitignore
+dist
+node_modules
+out

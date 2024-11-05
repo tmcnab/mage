@@ -35,10 +35,10 @@ export default function NationSelect(props: NationSelectProps): JSX.Element {
 	}, [id])
 
 	return (
-		<div style={{ border: '1px solid black', borderRadius: '0.25rem', padding: '0.5rem' }}>
+		<div>
 			<Flex>
 			{descriptions.map(item => 
-				<NationButton id={item.id} selected={item.id === id} onClick={() => setId(item.id)} />
+				<NationButton id={item.id} key={item.id} selected={item.id === id} onClick={() => setId(item.id)} />
 			)}
 			</Flex>
 			<p style={{ marginTop: '0.5rem' }}>{descriptions.find(i => i.id === id)?.description}</p>

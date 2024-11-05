@@ -10,7 +10,6 @@ import YearSlider from "./YearSlider"
 
 export default function GameSetupScreen(): JSX.Element {
 	const [options, setOptions] = useState<GameStartOptions>({
-		hardcore: false,
 		nation: 'usa',
 		year: 1935,
 	})

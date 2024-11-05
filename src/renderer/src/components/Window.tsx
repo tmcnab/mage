@@ -21,8 +21,8 @@ export default function Window(props: WindowProps): JSX.Element {
 
 	return (
 		<div style={frameStyle}>
-			<header style={{ fontWeight: 'bold', textAlign: 'center' }}>
-				<strong>{props.title}</strong>
+			<header style={{ textAlign: 'center' }}>
+				<span style={{ fontWeight: 'bold' }}>{props.title}</span>
 			</header>
 			<div style={{ height: '100%', padding: '1rem' }}>
 				{props.children}

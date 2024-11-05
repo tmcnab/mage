@@ -4,6 +4,7 @@
     "@electron-toolkit/preload": "^3.0.1",
     "@electron-toolkit/utils": "^3.0.0",
     "electron-updater": "^6.1.7",
+    "lodash": "^4.17.21",
     "react-router-dom": "^6.27.0"
   },
   "description": "An Electron application with React and TypeScript",

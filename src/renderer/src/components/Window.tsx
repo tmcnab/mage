@@ -3,20 +3,22 @@ import { CSSProperties, ReactNode } from "react"
 export interface WindowProps {
 	children: ReactNode
 	title: string
-
-}
-
-const frameStyle: CSSProperties = {
-	backgroundColor: 'darkgray',
-	borderRadius: '0.25rem',
-	minHeight: '40vh',
-	position: 'absolute',
-	width: '20vw',
-	left: '40vw',
-	top: '30vh',
+	width?: number
 }
 
 export default function Window(props: WindowProps): JSX.Element {
+	const width = props.width || 20
+
+	const frameStyle: CSSProperties = {
+		backgroundColor: 'darkgray',
+		borderRadius: '0.25rem',
+		minHeight: '40vh',
+		position: 'absolute',
+		width: `${width}vw`,
+		left: `${(100 - width) / 2}vw`,
+		top: '30vh',
+	}
+
 	return (
 		<div style={frameStyle}>
 			<header style={{ fontWeight: 'bold', textAlign: 'center' }}>

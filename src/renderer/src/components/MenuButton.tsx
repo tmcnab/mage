@@ -1,19 +1,8 @@
 import { CSSProperties } from "react"
 import { useNavigate } from 'react-router-dom'
 
-const style: CSSProperties = {
-	backgroundColor: 'ButtonFace',
-	borderColor: 'ButtonText',
-	borderRadius: '0.25rem',
-	borderStyle: 'groove',
-	borderWidth: 1,
-	color: 'ButtonText',
-	fontFamily: 'monospace',
-	fontSize: '1rem',
-	padding: '0.5rem',
-}
-
 export interface MenuButtonProps {
+	disabled?: boolean
 	label?: string
 	onClick: string | (() => void)
 }
@@ -26,6 +15,7 @@ export default function MenuButton (props: MenuButtonProps) : JSX.Element {
 	const navigate = useNavigate()
 
 	const {
+		disabled,
 		label,
 		onClick = onClickWarning,
 	} = props
@@ -40,5 +30,19 @@ export default function MenuButton (props: MenuButtonProps) : JSX.Element {
 		}
 	}
 
-	return <button children={children} onClick={onClickFn} style={style} />
+
+const style: CSSProperties = {
+	backgroundColor: 'ButtonFace',
+	borderColor: 'ButtonText',
+	borderRadius: '0.25rem',
+	borderStyle: 'groove',
+	borderWidth: 1,
+	color: disabled ? 'GrayText' : 'ButtonText',
+	cursor: disabled ? 'not-allowed' : 'pointer',
+	fontFamily: 'monospace',
+	fontSize: '1rem',
+	padding: '0.5rem',
+}
+
+	return <button children={children} disabled={disabled} onClick={onClickFn} style={style} />
 }

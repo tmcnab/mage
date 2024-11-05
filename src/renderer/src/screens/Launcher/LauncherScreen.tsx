@@ -11,8 +11,7 @@ export default function LauncherScreen(): JSX.Element {
 				<main>
 				</main>
 				<footer style={{ position: 'absolute', bottom: '2rem', left: '2rem' }}>
-					<MenuButton label='Start' />
-					<a href='/main-menu'>Main menu</a>
+					<MenuButton label='Start' onClick='/main-menu' />
 				</footer>
 			</Flex>
 		</Screen>

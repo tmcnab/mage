@@ -1,3 +1,4 @@
+import BackButton from "@renderer/components/BackButton"
 import Flex from "@renderer/components/Flex"
 import Screen from "@renderer/components/Screen"
 import Window from "@renderer/components/Window"
@@ -17,6 +18,7 @@ export default function OptionsScreen(): JSX.Element {
 							<span>UI Scale</span>
 						</Flex>
 					</form>
+					<BackButton />
 				</Window>
 			</Flex>
 		</Screen>

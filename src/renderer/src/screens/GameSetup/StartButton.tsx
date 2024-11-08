@@ -6,8 +6,13 @@ export interface StartButtonProps {
 }
 
 export default function StartButton ({options}: StartButtonProps) {
-	const icon = options.hardcore ? '✊' : '✅'
-	const label = `${icon} ${options.year} ${options.nation} start`
+	const label = `${options.year} ${options.nation} start`
+	
+	const search = new URLSearchParams()
+	search.set('year', options.year.toString())
+	search.set('nation', options.nation)
 
-	return <UIButton label={label} onClick={() => {}} />
+	const url = `/game?${search.toString()}`
+
+	return <UIButton label={label} onClick={url} />
 }

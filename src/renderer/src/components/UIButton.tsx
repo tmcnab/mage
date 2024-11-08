@@ -1,9 +1,10 @@
 import { CSSProperties } from "react"
+import { useNavigate } from "react-router-dom"
 
 export interface UIButtonProps {
-	onClick: () => void
-	label?: string
 	icon?: JSX.Element
+	label?: string
+	onClick: () => void | string
 }
 
 const style: CSSProperties = {
@@ -14,10 +15,20 @@ const style: CSSProperties = {
 }
 
 export default function UIButton (props: UIButtonProps) : JSX.Element {
+	const navigate = useNavigate()
+
 	const children = [
 		props.icon || '',
 		props.label || '',
 	].join(' ')
 
-	return <button children={children} onClick={props.onClick} style={style} />
+	const onClick = () => {
+		if (typeof props.onClick === 'string') {
+			navigate(props.onClick)
+		} else {
+			props.onClick()
+		}
+	}
+
+	return <button children={children} onClick={onClick} style={style} />
 }

@@ -5,7 +5,8 @@
     "@electron-toolkit/utils": "^3.0.0",
     "electron-updater": "^6.1.7",
     "lodash": "^4.17.21",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "react-simple-maps": "^3.0.0"
   },
   "description": "An Electron application with React and TypeScript",
   "devDependencies": {

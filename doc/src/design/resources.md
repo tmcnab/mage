@@ -1,0 +1,1 @@
+Every `Territory` has a `Resource` of a certain grade: 'Low`, 'Medium', 'Large', ''.

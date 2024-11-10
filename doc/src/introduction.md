@@ -1,0 +1,1 @@
+Map Game Engine (MaGE) is a grand strategy game engine along the same vein as Paradox games Hearts of Iron IV, Europa Universalis 3, Victoria 3 and Crusader Kings III etc. It attempts to simulate world history from the start of the _Industrial Age_ to the current _Information Age_.

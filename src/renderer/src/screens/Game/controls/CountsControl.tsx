@@ -27,5 +27,7 @@ export default function Counts () : JSX.Element {
 		</div>
 	)
 
-	return <Flex children={children} />
+	return (
+		<Flex children={children} />
+	)
 }
